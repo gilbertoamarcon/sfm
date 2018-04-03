@@ -1,0 +1,6 @@
+08:06:23 [App     ] Build date: Apr  2 2018, 17:35:02
+08:06:23 [App     ] CPU: Intel(R) Xeon(R) CPU E5-1630 v4 @ 3.70GHz
+08:06:23 [App     ] RAM: 125.83GB Physical Memory 127.92GB Virtual Memory
+08:06:23 [App     ] OS: Linux 4.13.0-36-generic (x86_64)
+08:06:23 [App     ] SSE & AVX compatible CPU & OS detected
+08:06:23 [App     ] Command line: /home/gil/Pictures/res/scene_dense.mvs

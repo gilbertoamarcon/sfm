@@ -27,14 +27,38 @@ TextureMesh=$openMVS_bins/TextureMesh
 sfmdata=$out_dir/reconstruction_global/sfm_data.bin
 mvs_scene=$out_dir/scene
 
-# SFM Reconstruction
+echo ''
+echo '=================='
+echo 'SFM Reconstruction'
+echo '=================='
 python $SfM_GlobalPipeline $pic_dir $out_dir
 
-# openMVG to openMVS
+echo ''
+echo '=================='
+echo 'openMVG to openMVS'
+echo '=================='
 $openMVG_main_openMVG2openMVS -i $sfmdata -o $mvs_scene.mvs
 
-# Post processing
-$DensifyPointCloud $mvs_scene
+echo ''
+echo '=================='
+echo 'DensifyPointCloud'
+echo '=================='
+$DensifyPointCloud $mvs_scene.mvs
+
+echo ''
+echo '=================='
+echo 'ReconstructMesh'
+echo '=================='
 $ReconstructMesh ${mvs_scene}_dense.mvs
+
+echo ''
+echo '=================='
+echo 'RefineMesh'
+echo '=================='
 $RefineMesh ${mvs_scene}_dense_mesh.mvs
+
+echo ''
+echo '=================='
+echo 'TextureMesh'
+echo '=================='
 $TextureMesh ${mvs_scene}_dense_mesh.mvs

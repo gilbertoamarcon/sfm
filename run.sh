@@ -5,6 +5,7 @@ pic_dir=$1
 
 # Output directory
 out_dir=$2
+rm -Rf $out_dir
 mkdir -p $out_dir
 
 # Binary directories

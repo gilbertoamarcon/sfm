@@ -5,6 +5,7 @@ pic_dir=$1
 
 # Output directory
 out_dir=$2
+mkdir -p $out_dir
 
 # Binary directories
 openMVG_bins=${HOME}/dev/openMVG/openMVG_Build

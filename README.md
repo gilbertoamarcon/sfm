@@ -5,6 +5,9 @@ A script bundle to automatically setup and run openMVG and openMVS for dense ste
 ## Setup ##
 
 ```
+mkdir -p ${HOME}/dev
+git clone git@github.com:gilbertoamarcon/sfm.git ${HOME}/dev/sfm/
+cd ${HOME}/dev/sfm/
 ./setup.sh
 ```
 

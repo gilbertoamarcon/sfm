@@ -4,6 +4,7 @@ sudo apt-add-repository ppa:zarquon42/meshlab -y
 sudo apt-get -y update
 sudo apt-get -y update -qq
 sudo apt-get -y install -qq
+sudo apt-get -y install meshlab
 sudo apt-get -y install build-essential
 sudo apt-get -y install git
 sudo apt-get -y install mercurial
